@@ -2,7 +2,7 @@
 /**
 *print_times_table - prints the n times table
 */
-void print_times_table(void)
+void print_times_table(int n)
 {
 int x, y, res;
 if (!(n > 15 || n < 0))
