@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	char x[9] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n'};
+	char x[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
 	unsigned int y;
 
 	for (y = 0; y < sizeof(x); y++)
