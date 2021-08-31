@@ -1,0 +1,1 @@
+*This dierectory contains solutions to the project C - nested loops*
