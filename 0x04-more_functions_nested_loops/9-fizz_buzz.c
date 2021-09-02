@@ -3,10 +3,6 @@
 
 /**
  * main - entry point
- * @j: integer
- * @x: string
- * @y: string
- * @z: string
  * Return: always 0
  */
 
@@ -41,4 +37,3 @@ int main(void)
 	printf("\n");
 	return (0);
 }
-	
