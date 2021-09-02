@@ -2,6 +2,7 @@
 
 /**
  * print_line - prints n number of _
+ * @n: integer
  */
 
 void print_line(int n)
@@ -16,7 +17,7 @@ void print_line(int n)
 	{
 		for (x = 0; x < n; x++)
 		{
-			_putchar(_);
+			_putchar('_');
 		}
 		_putchar('\n');
 	}
