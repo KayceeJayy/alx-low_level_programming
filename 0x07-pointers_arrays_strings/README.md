@@ -1,0 +1,1 @@
+*This directory contains more pointer problems and solutions*
