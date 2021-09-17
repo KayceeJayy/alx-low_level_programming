@@ -1,0 +1,1 @@
+*This directory contains all the solutions to the static libraries project*
