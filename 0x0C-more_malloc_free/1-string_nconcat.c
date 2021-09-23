@@ -1,39 +1,33 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
- * string_nconcat - concatenate two strings
- * @s1: is a pointer to the first string
- * @s2: is a pointer to the second string
- * @n: an integer (6) with the limit of what we are going to add to s1
- * Return: pointer to a newlly allocated memory with s1 & s2, NULL if else
+ * string_nconcat - Concatenates two strings
+ * @s1: Destination string
+ * @s2: Source string
+ * @n: Number of bytes to copy
+ * Return: Pointer to array
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *strings;
-	unsigned int lengths1, lengths2;
+	char *str, *str_tmp;
+	unsigned int i = 0, len_1 = 0, len_2 = 0;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-	for (lengths1 = 0; s1[lengths1] != '\0'; lengths1++)
+	s1 = s1 == NULL ? "" : s1, s2 = s2 == NULL ? "" : s2;
+	for (; s1[len_1]; ++len_1)
 		continue;
-	for (lengths2 = 0; s2[lengths2] != '\0'; lengths2++)
+	for (; s2[len_2] && len_2 < n; ++len_2)
 		continue;
-	if (n > lengths2)
-		n = lengths2;
 
-	strings = malloc((lengths1 + n + 1) * sizeof(char));
-	if (strings == NULL)
+	str = malloc(sizeof(char) * (len_1 + len_2 + 1)), str_tmp = str;
+	if (str == NULL)
 		return (NULL);
-	for (lengths1 = 0; s1[lengths1] != '\0'; lengths1++)
-		strings[lengths1] = s1[lengths1];
-	for (lengths2 = 0; lengths2 < n; lengths2++, lengths1++)
-		strings[lengths1] = s2[lengths2];
-	strings[lengths1] = '\0';
-	return (strings);
+	while (*s1)
+		*str++ = *s1++;
+	for (; i < len_2; i++)
+		*str++ = *s2++;
+	*str = '\0';
+	return (str_tmp);
 }
-
