@@ -1,0 +1,1 @@
+*This function contains solutions to the Variadic functions project*
