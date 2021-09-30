@@ -16,6 +16,7 @@ int sum_them_all(const unsigned int n, ...)
 	va_list ptr;
 
 	va_start(ptr, n);
+	/* Accessing the next variadic function argument */
 
 	for (i = 0; i < n; i++)
 		sum += va_arg(ptr, int);
