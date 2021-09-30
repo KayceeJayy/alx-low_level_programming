@@ -3,9 +3,10 @@
 #include "variadic_functions.h"
 
 /**
- * sum_them_all - Sums up all its parameters
+ * sum_them_all - adds parameters
  * @n: number of parameters
- * Return: Sum of parameters
+ *
+ * Return: Sum
  */
 
 int sum_them_all(const unsigned int n, ...)
