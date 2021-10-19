@@ -15,4 +15,4 @@ void print_elf_header(void *h);
 void print_elf_header_2(void *h);
 void put_err(char *str);
 
-#endif /*_MAIN_H_*/
+#endif
